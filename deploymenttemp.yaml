@@ -18,7 +18,7 @@ spec:
         app: go-test
     spec:
       containers:
-      - image: 10.168.0.76:9000/repository/dev-registry/go@sha256:0d733ed42d625c5c9d199c97a656d32fc7493c71ceb262f3446941f4b6aeab69
+      - image: 10.168.0.76:9000/repository/dev-registry/go:${version}
         name: go
         resources: {}
       imagePullSecrets:
