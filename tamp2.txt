@@ -5,13 +5,23 @@ The word is ${word}
 
 sed -e "s/\${i}/1/" -e "s/\${word}/dog/" template.txt
 
-version = $(git rev-list --count HEAD)
+version=$(git rev-list --count HEAD)
 
 sed -e "s/\${version}/16/" temptest.txt > temptest2.txt
 
-VERSION=$(git rev-list --count HEAD)
+export VERSION=$(git rev-list --count HEAD)
 sed -e "s/\${version}/$VERSION/" buildconfigtemp.yaml > buildconfig.yaml
 
 VERSION=$(echo 1)
+vi 
+
 
 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
+
+
+git add .
+git commit -m "Update"
+git push
+
+
+oc get buildconfig | grep testr | awk '{print $1;}'

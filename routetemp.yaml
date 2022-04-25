@@ -3,6 +3,8 @@ kind: Route
 metadata:
   name: go-route-${version}
   namespace: pod-test
+  labels:
+    app: "go-test-${version}"
 spec:
   path: /
   to:

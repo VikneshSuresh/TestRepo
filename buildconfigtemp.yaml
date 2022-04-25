@@ -1,7 +1,9 @@
 kind: BuildConfig
 apiVersion: build.openshift.io/v1
 metadata:
-  name: "go-build-${version}" 
+  name: "go-build-${version}"
+  labels:
+    app: "go-test-${version}"
 spec:
   runPolicy: "Serial"
   triggers: 
