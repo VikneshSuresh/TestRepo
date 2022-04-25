@@ -1,0 +1,12 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: go-route-${version}
+  namespace: pod-test
+spec:
+  path: /
+  to:
+    kind: Service
+    name: go-service-${version}
+  port:
+    targetPort: 8080
