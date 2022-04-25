@@ -15,7 +15,7 @@ spec:
     metadata:
       creationTimestamp: null
       labels:
-        app: go-test
+        app: go-test-${version}
     spec:
       containers:
       - image: 10.168.0.76:9000/repository/dev-registry/go:${version}
